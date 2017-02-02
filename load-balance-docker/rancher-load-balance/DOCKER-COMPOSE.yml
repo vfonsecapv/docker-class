@@ -1,0 +1,23 @@
+version: '2'
+services:
+  apache1:
+    image: sciensaportoseguro/devops-apache:v2
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.scheduler.affinity:host_label: stateless=true
+      io.rancher.container.pull_image: always
+  apache2:
+    image: sciensaportoseguro/devops-apache:v2
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.scheduler.affinity:host_label: stateless=true
+      io.rancher.container.pull_image: always
+  load-balancer:
+    labels:
+      io.rancher.scheduler.affinity:host_label: proxy=true
+      io.rancher.container.pull_image: always
+    image: rancher/lb-service-haproxy:v0.4.9
+    ports:
+      - 80
