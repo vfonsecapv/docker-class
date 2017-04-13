@@ -50,7 +50,7 @@
                                 <img src="http://www.mmwb.nl/wp-content/uploads/2014/10/ordina-logo-455x300.jpg?81fc35" alt="ordina" />
                             </td>
                             <td>
-                                <h3>Sample web-page</h3>
+                                <h3>Sample web-page V3</h3>
                             </td>
                         </tr>
                     </table>
